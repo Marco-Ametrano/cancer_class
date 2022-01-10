@@ -1,5 +1,5 @@
 # cancer_class
-classification project with medical data using decision tree.
+classification project with medical data using decision tree ans support vector machine.
 The data have been downloaded from the website kaggle.com and the analysis was coducted using Google colab.
 The datadet had 569 observations and the target variable "diagnosis", which had two outputs "M" and "B". WHere "M" stands for malignant and "B" for benign.
 These ooutputs have been then changed in a binary encoding (1 for "M" and 0 for "B") in order to compute the correlation between this variable and all the predictors. 
@@ -12,3 +12,5 @@ Subsequently, missing data have ben checked and detected for the variable "Unnam
 Subsequently, the variables have been standardized because they have different units of measure. Feature selectiion has been then carried out through feature importance score computation. 
 
 Once completed feature selection, the dataset has been splitted into training set (70%) and test set (30%). To identify the best hyper-parameter configuration for the decision tree gridsearch cross-validation. Once gained the best configuration, the tree obtained had 8 terminal nodes, which have low impurity values. In addition, the model has been evaluated on both the training set and the test set through F-1 score because the classes are not balanced. The model has high scores on both sets, therefore it has good classification performances and does not show overfitting. 
+
+The second model employed is support vector machine (SVM). As for the decision, grid search has been also used in this case to identify the best hyper-parameter configuration (in this case for the parameter C and the kernel function). The classification resluts were good on both the training set and test set. To visualise the results obtained from the SVM classification a dimensionalty reduction through principal component analysis (PCA) has been made. The principal components selected are 2 and explain about 50% of the total inertia. On this lower dimension dataset the SVM classificaiton produced satisfying results.   
